@@ -15,16 +15,31 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryAddUsageDescription": "App needs access to save photos",
+        "NSPhotoLibraryUsageDescription": "App needs access to your photo library"
+      },
+      "bundleIdentifier": "com.marcosofx.EtiquetaQRApp"
     },
     "android": {
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroun    dColor": "#ffffff"
+      },
+      "package": "com.marcosofx.EtiquetaQRApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9e9ed3ee-c5a0-46d8-880d-27fc066083a5"
+      }
     }
   }
 }
